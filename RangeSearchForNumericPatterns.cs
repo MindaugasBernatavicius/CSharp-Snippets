@@ -33,6 +33,8 @@ public class Program
         Console.WriteLine(r3);
         Console.WriteLine("---------");
         Console.WriteLine(r4);
+        Console.WriteLine("---------");
+        Console.WriteLine(r5);
 
         Console.ReadLine();
 
@@ -100,7 +102,7 @@ public class Program
         int subI;
         Int32.TryParse(subS, out subI);
 
-        // increment by 1
+        // decrement by 1
         subI -= 1;
 
         // add appropriate amount of zeros
@@ -116,7 +118,9 @@ public class Program
 
         int si = getStartIdx(s, strPttr);
         int se = getEndIdx(s, endPttr);
-
+        
+        // get the subpattern by the lastIndexOf() it
+        // + endPttr.Length to include the pattern itself
         s = s.Substring(si, se - si + endPttr.Length).TrimEnd('\n');
 
         return s;
